@@ -1,0 +1,77 @@
+body {
+    background: linear-gradient(130deg, #254E70, #8EE3EF);
+    background-attachment: fixed;
+    margin: 0px;
+    padding: 20px;
+}
+
+/* header_insert.php - Header */
+
+.header_bloc {
+    max-width: 1000px;
+    height: 4em;
+    margin: auto;
+    padding: 0px;
+    background: aliceblue;
+    opacity: 70%;
+    display: flex;
+    flex-direction: row;
+
+}
+.website_title {
+    font-family: Arial;
+    font-size: 2em;
+    /*background: red;*/
+    margin: auto 30px;
+}
+.header_menu {
+    display: flex;
+    flex-direction: row;
+    /*background: #254E70;*/
+    font-family: Arial;
+    font-size: large;
+    list-style: none;
+    margin: auto 0px;
+    padding: 0px;
+}
+.header_menu * {
+    margin: 10px;
+    padding: 0px;
+    font-size: large;
+    color: black;
+    text-decoration:none;
+}
+
+/* index.php - Main */
+
+.main_page {
+    max-width: 1000px;
+    margin: 20px auto;
+    min-height: 300px;
+    padding: 0px;
+    background: aliceblue;
+    opacity: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* welcome_insert.php - Welcome */
+
+.separation_line {
+    height: 3px;
+    max-width: 300px;
+    min-width: 100px;
+    background: black;
+    margin: auto 30px
+}
+.chart_box {
+    border-radius: 20px;
+    opacity: 100%;
+    background: white;
+    padding: 20px;
+    margin: 0px 30px;
+
+}
+#chartContainer {
+    opacity: 100%;
+}
