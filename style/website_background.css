@@ -63,9 +63,10 @@ body {
 .separation_line {
     height: 3px;
     max-width: 300px;
-    min-width: 100px;
+    min-width: 200px;
     background: #C33C54;
-    margin: auto 30px
+    margin: auto 30px;
+    border-radius: 3px;
 }
 .chart_box {
     border-radius: 20px;
@@ -77,4 +78,17 @@ body {
 }
 #chartContainer {
     opacity: 100%;
+}
+
+th {
+    background: #c33c54;
+    border: black solid 2px;
+}
+tr {
+    border: black solid 2px;
+}
+table {
+    margin: auto;
+    width: auto;
+    background: black;
 }
