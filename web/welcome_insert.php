@@ -21,9 +21,9 @@
                         indexLabelFontSize: 16,
                         indexLabel: "{label} - {y}%",
                         dataPoints: [
-                            {y: 10, label: "Prévu"},
-                            {y: 75, label: "Reste"},
-                            {y: 25, label: "Fait"},
+                            {y: <?php $req_chart_hours['prevu'] ?>, label: "Prévu"},
+                            {y: <?php $req_chart_hours['reste'] ?>, label: "Reste"},
+                            {y: <?php $req_chart_hours['fait'] ?>, label: "Fait"},
                         ]
                     }]
                 });

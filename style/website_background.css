@@ -16,13 +16,14 @@ body {
     opacity: 70%;
     display: flex;
     flex-direction: row;
-
+    border-radius: 5px;
 }
 .website_title {
     font-family: Arial;
     font-size: 2em;
     /*background: red;*/
     margin: auto 30px;
+    color: #C33C54;
 }
 .header_menu {
     display: flex;
@@ -53,6 +54,8 @@ body {
     opacity: 70%;
     display: flex;
     flex-direction: column;
+    border-radius: 5px;
+
 }
 
 /* welcome_insert.php - Welcome */
@@ -61,14 +64,14 @@ body {
     height: 3px;
     max-width: 300px;
     min-width: 100px;
-    background: black;
+    background: #C33C54;
     margin: auto 30px
 }
 .chart_box {
     border-radius: 20px;
     opacity: 100%;
     background: white;
-    padding: 20px;
+    padding: 10px;
     margin: 0px 30px;
 
 }
