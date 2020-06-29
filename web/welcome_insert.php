@@ -38,7 +38,7 @@
         <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     </div>
 </section>
-<section>
+<section style="margin: auto">
     <?php $input_line = "Historique des sorties"; include "line.php"?>
     <?php
         /* Sum of time spent driving */
@@ -55,31 +55,49 @@
         $reponse->closeCursor();
     ?>
     <div>
-        <table>
+        <table class="greyGridTable">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Heure début</th>
+                    <th>Heure fin</th>
+                    <th>Durée</th>
+                    <th>Cumul</th>
+                    <th>Restant</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <form id="historyHourDrive" method="post" action="index.php">
+                        <th><input type="date" form="historyHourDrive" name="date_in" autofocus required/></th>
+                        <th><input type="time" form="historyHourDrive" name="start_time_in" required></th>
+                        <th><input type="time" form="historyHourDrive" name="end_time_in" required></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th><input type="text" form="historyHourDrive" name="report_in" required></th>
+                    </form>
+                </tr>
+            </tfoot>
             <tbody>
-            <tr>
-                <th>Date</th>
-                <th>Heure début</th>
-                <th>Heure fin</th>
-                <th>Durée</th>
-                <th>Cumul</th>
-                <th>Restant</th>
-            </tr>
-            <tr>
                 <?php
                     $reponse = $bdd->query('SELECT * FROM history ORDER BY ID');
-                    while($donnee = $reponse->fetch()) {
-                        echo '<td>' . $donnee['date'] . '</td>
-                        <td>' . $donnee['start_time'] . '</td>
-                        <td>' . $donnee['end_time'] . '</td>
-                        <td>' . $donnee['duration'] . '</td>
-                        <td>' . $duration_sum_text . '</td>
-                        <td>' . $donnee['remaining_hour'] .'</td>';
-                    }
-                $reponse->closeCursor();
-                ?>
-            </tr>
+                    while($donnee = $reponse->fetch()) { ?>
+                        <tr>
+                            <?php
+                                    echo '<td>' . $donnee['date'] . '</td>
+                                    <td>' . $donnee['start_time'] . '</td>
+                                    <td>' . $donnee['end_time'] . '</td>
+                                    <td>' . $donnee['duration'] . '</td>
+                                    <td>' . $duration_sum_text . '</td>
+                                    <td>' . $donnee['remaining_hour'] .'</td>
+                                    <td>' . $donnee['report'] .'</td>';
+                            ?>
+                        </tr>
+                <?php } $reponse->closeCursor(); ?>
             </tbody>
         </table>
+        <input type="submit" form="historyHourDrive">
     </div>
 </section>
